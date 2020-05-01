@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Change background when hovering</title>
+    <link rel="stylesheet" href="styles.css">
+    <script  src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="picture"></div>
+      <ul>
+        <li rel="one"><a href="#" data-text='Today'>Today</a></li>
+        <li rel="two"><a href="#" data-text='Books'>Books</a></li>
+        <li rel="three"><a href="#" data-text='Php'>Php</a></li>
+        <li rel="four"><a href="#" data-text='Call Auri'>Call Auri</a></li>
+        <li rel="five"><a href="#" data-text='Format files'>Format files</a></li>
+      </ul>
+    </div>
+    <script type="text/javascript">
+      $('ul li').hover(function(){
+        $('#picture').removeClass().addClass(
+          $(this).attr('rel'));
+        $(this).addClass('active').siblings()
+          .removeClass('active');
+      });
+    </script>
+  </body>
+</html>

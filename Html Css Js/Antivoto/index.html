@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Remoción.cl</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <h4>Remoción.cl</h4>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">VOTACIÓN</a></li>
+        <li><a href="#">MINISTROS</a></li>
+        <li><a href="#">DIPUTADOS</a></li>
+        <li><a href="#">SENADORES</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <div class="login-page">
+      <div class="form">
+        <form class="register-form">
+          <h1>Registro</h1>
+            <input type="text" placeholder=" usuario"/ required autofocus>
+            <input type="password" placeholder=" contraseña"/ required>
+            <input type="email" placeholder=" email"/ required>
+            <button>Regístrate</button>
+            <p class="message">Ya estás registrad@? <a href="#">Ingresa</a></p>
+        </form>
+
+        <form class="login-form">
+          <h1>Ingresa</h1>
+          <input type="text" placeholder=" usuario"/ required autofocus>
+          <input type="password" placeholder=" contraseña"/ required>
+          <button> Ir a votación</button>
+          <p class="message">No estás registrad@? <a href="#">Regístrate</a></p>
+        </form>
+      </div>
+    </div>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+    <script>
+    $('.message a').click(function(){
+    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+    });
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
