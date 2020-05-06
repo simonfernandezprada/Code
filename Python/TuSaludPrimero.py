@@ -1,18 +1,24 @@
 
-from datetime import datetime
-now = datetime.now()
-current_time = now.strftime("%H:%M:%S")
-hour = now.strftime("%H")
-minute = now.strftime("%M")
+print("Hola le tomo su orden disponemos de los siguientes tipos de pizzas son: (1)Fiorina, (2)Napolitana, (3)Firenze y (4)Simple")
+Pizzas = int(input("Ingrese cuantas pizzas va a querer: "))
+tipo = int(input("Okey, De que tipo 1 , 2 , 3 o 4?: "))
+piza = tipo
 
-habil = print("Hábil")
-inhabil = print("Inhabil")
-if now.strftime("%H") >= 8 and now.strftime("%H") < 20:
-    schedule = habil()
-else: 
-    schedule = inhabil()
-
-print(f"Bienvenidos a Clinica Tu Salud Primero. Son las {current_time}. Es horario de atención es {schedule} Por favor, ingrese la edad del paciente")
-age = int(input())
-
-
+if  piza == 1:
+     A = 6500
+else:
+    A=0
+if piza == 2:
+    C = 6000
+else:
+    C = 0
+if piza == 3:
+    X = 7500
+else:
+    X = 0
+if piza == 4:
+      D = 5000
+else:
+      D = 0
+Total = A + C + X + D
+print(f"Su total es de {Total}")
