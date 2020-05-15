@@ -69,7 +69,7 @@ Por favor, seleccione una opción: """))
                         elif eleccion == 2:
                             correo = input("\n\n\tPor favor, ingrese la dirección de email: ")
                             mensaje = input("\n\n\tEscriba su mensaje aquí. \n\n\t  ")
-                            print(f"\n\n\tSu mensaje \n\t{mensaje} \n\n\t Ha sido guardado y está listo para ser enviado.")
+                            print(f"\n\n\tSu mensaje \n\n\t\t{mensaje} \n\n\tHa sido guardado y está listo para ser enviado.")
                         elif eleccion == 3:
                             print(f"\n\n\tEstimado {usuario1}, su sesión ha sido cerrada con éxito")
                             print ("\n\n\tHasta luego")
