@@ -43,14 +43,14 @@ Selecciona una opción del 1 al 4: """))
                 if i>=5:
                     print("Demasiados intentos. Vuelve al menú.")
                     opcion = 0
-    if opcion == 2:
+    elif opcion == 2:
         registroUsuario = input("Ingrese el nombre de usuario a registrar: ")
         registroContrasena = input("Ingrese la contraseña a registrar: ")
         usuario.append(registroUsuario)
         contrasena.append(registroContrasena)
         print(f"El usuario {registroUsuario} y su contraseña han sido registrados con éxito")
         opcion = 0
-    if opcion == 3:
+    elif opcion == 3:
         i = 0
         while i<5:
             eliminaUsuario = input("Ingresa el nombre de usuario a eliminar: ")
@@ -73,8 +73,8 @@ Selecciona una opción del 1 al 4: """))
                     print("Demasiados intentos. Vuelve al menú.")
                     opcion = 0
 
-    if opcion == 4:
+    elif opcion == 4:
         print("Adios, amigo")
         exit()
-    if opcion >= 5 or opcion <0:
+    elif opcion >= 5 or opcion <0:
         print("\nSeleciona una opción del 1 al 4")
