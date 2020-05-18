@@ -39,6 +39,7 @@ while opcion != 4:
                     if indexUsuario == indexContrasena:
                         print (f"¡Bienvenido {ingresoUsuario}, enhorabuena, éxito!")
                         opcion = 0
+                        break
                     else:
                         print ("Acceso denegado")
                         if i>=5:
@@ -56,6 +57,14 @@ while opcion != 4:
                     opcion = 0
     elif opcion == 2:
         registroUsuario = input("Ingrese el nombre de usuario a registrar: ")
+        utilizado = False
+        if registroUsuario in usuario:
+            utilizado = True
+        while utilizado == True:
+            print("Usuario ya existe, intente con otro nombre de usuario.")
+            registroUsuario = input("Ingrese el nombre de usuario a registrar: ")
+            if registroUsuario not in usuario:
+                utilizado = False
         registroContrasena = input("Ingrese la contraseña a registrar: ")
         usuario.append(registroUsuario)
         contrasena.append(registroContrasena)
@@ -67,12 +76,20 @@ while opcion != 4:
             eliminaUsuario = input("Ingresa el nombre de usuario a eliminar: ")
             i=i+1
             if eliminaUsuario in usuario:
+                indexUsuario = usuario.index(eliminaUsuario)
                 eliminaContrasena = input ("Ingrese contraseña: ")
                 if eliminaContrasena in contrasena:
-                    print (f"El nombre de usuario {eliminaUsuario} y su contraseña han sido eliminadas")
-                    usuario.remove(eliminaUsuario)
-                    contrasena.remove(eliminaContrasena)
-                    opcion = 0
+                    indexContrasena = contrasena.index(eliminaContrasena)
+                    if indexUsuario == indexContrasena:
+                        print (f"El nombre de usuario {eliminaUsuario} y su contraseña han sido eliminadas")
+                        usuario.remove(eliminaUsuario)
+                        contrasena.remove(eliminaContrasena)
+                        opcion = 0
+                    else:
+                        print ("Contraseña inválida")
+                        if i>=5:
+                            print("Demasiados intentos. Vuelve al menú.")
+                            opcion = 0
                 else:
                     print ("Contraseña inválida")
                     if i>=5:
