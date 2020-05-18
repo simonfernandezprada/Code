@@ -14,15 +14,18 @@ usuario = []
 contrasena = []
 opcion = 0
 while opcion != 4:
-    opcion = int(input("""
-    \tM E N U
+    try:
+        opcion = int(input("""
+        \tM E N U
 
-    1) Inicio sesión.
-    2) Registrar usuario
-    3) Eliminar usuario.
-    4) Salir.
+        1) Inicio sesión.
+        2) Registrar usuario
+        3) Eliminar usuario.
+        4) Salir.
 
-Selecciona una opción del 1 al 4: """))
+        Selecciona una opción del 1 al 4: """))
+    except:
+        print("\nOpción inválida. Intente nuevamente") 
     if opcion == 1:
         i = 0
         while i<5:
