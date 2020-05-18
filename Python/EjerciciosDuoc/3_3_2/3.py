@@ -6,9 +6,10 @@
 nombres = []
 mas = False
 while mas == False:
-    x = input("Escribe un nombre wey: ")
+    x = input("Escribe un nombre: ")
     nombres.append(x)
-    respuesta = input("¿Desea agregar otro nombre, hermanito? \nPara continuar presione enter \nPara dejar de ingresar nombres escribe NO: ")
+    respuesta = input("¿Desea agregar otro nombre? \nPara continuar presione enter \nPara dejar de ingresar nombres escribe NO: ")
+    negacion = respuesta.upper()
     negacion = respuesta.lower()
     if negacion == "no":
         mas = True

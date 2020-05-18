@@ -25,17 +25,25 @@ while opcion != 4:
 
         Selecciona una opción del 1 al 4: """))
     except:
-        print("\nOpción inválida. Intente nuevamente") 
+        print("\nOpción inválida. Intente nuevamente")
     if opcion == 1:
         i = 0
         while i<5:
             ingresoUsuario = input("USUARIO: ")
             i=i+1
             if ingresoUsuario in usuario:
-                ingresoContrasena = input ("CONTRASEÑA: ")
+                indexUsuario = usuario.index(ingresoUsuario)
+                ingresoContrasena = input("CONTRASEÑA: ")
                 if ingresoContrasena in contrasena:
-                    print (f"¡Bienvenido {ingresoUsuario}, enhorabuena, éxito!")
-                    opcion = 0
+                    indexContrasena = contrasena.index(ingresoContrasena)
+                    if indexUsuario == indexContrasena:
+                        print (f"¡Bienvenido {ingresoUsuario}, enhorabuena, éxito!")
+                        opcion = 0
+                    else:
+                        print ("Acceso denegado")
+                        if i>=5:
+                            print("Demasiados intentos. Vuelve al menú.")
+                            opcion = 0
                 else:
                     print ("Acceso denegado")
                     if i>=5:

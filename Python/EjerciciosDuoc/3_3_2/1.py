@@ -5,6 +5,6 @@
 nombres = []
 
 while len(nombres) < 3:
-    x = input("Escribe tu nombre mi hermano banano: ")
+    x = input("Escribe tu nombre: ")
     nombres.append(x)
 print (max(nombres, key=len))

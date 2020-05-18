@@ -38,7 +38,7 @@ while opcion != 4:
 
                 Elige un producto del 1 al 5:          """))
             except:
-                print("\nOpción no válida. Intenta nuevamente")
+                print("\nOpción no válida, amigo. Intenta nuevamente")
             if compra == 1:
                 canasta.append("Bata quirurjica 50u")
                 total = total + 25000
@@ -55,7 +55,7 @@ while opcion != 4:
                 canasta.append("Alcohol gel 10lt")
                 total = total + 50000
             elif compra >= 6 or compra <0:
-                print("\nPor Favor, sólo elige opción de 1 al 4")
+                print("\nPor favor, sólo elige opción de 1 al 4")
             decision = int(input("¿Deseas seguir agregando productos a tu canasta?\n1. Sí\n2. No\tEscribe 1 ó 2: "))
             if decision == 1:
                 eleccion = False
