@@ -13,6 +13,13 @@ mensaje de error de caso contrario.
 usuario = []
 contrasena = []
 opcion = 0
+
+def denegado():
+    print ("Acceso denegado")
+    if i>=5:
+        print("Demasiados intentos. Vuelve al menú.")
+        opcion = 0
+
 while opcion != 4:
     try:
         opcion = int(input("""
@@ -41,15 +48,9 @@ while opcion != 4:
                         opcion = 0
                         break
                     else:
-                        print ("Acceso denegado")
-                        if i>=5:
-                            print("Demasiados intentos. Vuelve al menú.")
-                            opcion = 0
+                        denegado()
                 else:
-                    print ("Acceso denegado")
-                    if i>=5:
-                        print("Demasiados intentos. Vuelve al menú.")
-                        opcion = 0
+                    denegado()
             else:
                 print(f"Usuario {ingresoUsuario} no existe")
                 if i>=5:
@@ -86,15 +87,9 @@ while opcion != 4:
                         contrasena.remove(eliminaContrasena)
                         opcion = 0
                     else:
-                        print ("Contraseña inválida")
-                        if i>=5:
-                            print("Demasiados intentos. Vuelve al menú.")
-                            opcion = 0
+                        denegado()
                 else:
-                    print ("Contraseña inválida")
-                    if i>=5:
-                        print("Demasiados intentos. Vuelve al menú.")
-                        opcion = 0
+                    denegado()
             else:
                 print(f"Usuario {eliminaUsuario} no existe")
                 if i>=5:
